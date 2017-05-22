@@ -1,0 +1,5 @@
+.section 			> .backstretch img  {top: 0px !important; left:0 !important; max-width: 100% !important; height: auto !important;}
+.section  .menu-bg 	> .backstretch img  {top: 0px !important; left:0 !important; max-width: 100% !important; height: auto !important;}
+.section  .menu-bg 						{max-width: 100%; position: absolute;}
+/*section, .menu-bg{ overflow: hidden1; }*/
+.opacity{opacity: .8;}

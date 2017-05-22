@@ -1,0 +1,24 @@
+
+
+.csscolumns .colmns-3 .item, 
+.csscolumns .colmns-2 .item,
+.csscolumns .colmns-4 .item,
+.csscolumns .colmns-5 .item   {
+  width: 100%; 
+  float: none; 
+  padding-right: 0; 
+}
+.no-csscolumns .colmns-2 .item
+{ 
+  width: 48%; 
+  float: left; 
+  padding-right: 2.5%; 
+}
+
+
+.no-csscolumns .colmns-3 .item
+{ 
+  width: 31%; 
+  float: left; 
+  padding-right: 1.5%; 
+}

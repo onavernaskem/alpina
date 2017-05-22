@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'GTWalsheimProMedium';
+  src: url('../fonts/GTWalsheimProMedium.woff') format('woff'),
+       url('../fonts/GTWalsheimProMedium.ttf') format('truetype'),
+       url('../fonts/GTWalsheimProMedium.svg#GTWalsheimProMedium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'GTWalsheimProLight';
+  src: url('../fonts/GT-Walsheim-Pro-Light.woff') format('woff'),
+       url('../fonts/GT-Walsheim-Pro-Light.ttf') format('truetype'),
+       url('../fonts/GT-Walsheim-Pro-Light.svg#GTWalsheimProLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GTWalsheimProBold';
+  src: url('../fonts/GT-Walsheim-Pro-Bold.woff') format('woff'),
+       url('../fonts/GT-Walsheim-Pro-Bold.ttf') format('truetype'),
+       url('../fonts/GT-Walsheim-Pro-Bold.svg#GTWalsheimProBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GTWalsheimProRegular';
+  src: url('../fonts/GT-Walsheim-Pro-Regular.woff') format('woff'),
+       url('../fonts/GT-Walsheim-Pro-Regular.ttf') format('truetype'),
+       url('../fonts/GT-Walsheim-Pro-Regular.svg#GTWalsheimProRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+
+@font-face {
+  font-family: 'SchoolBookC-Italic';
+  src: url('../fonts/SchoolBookC-Italic.eot');
+  src: url('../fonts/SchoolBookC-Italic.woff2') format('woff2'),
+       url('../fonts/SchoolBookC-Italic.woff') format('woff'),
+       url('../fonts/SchoolBookC-Italic.ttf') format('truetype'),
+       url('../fonts/SchoolBookC-Italic.svg#SchoolBookC-Italic') format('svg'),
+       url('../fonts/SchoolBookC-Italic.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SchoolBookC-Bold';
+  src: url('../fonts/SchoolBookC-Bold.eot');
+  src: url('../fonts/SchoolBookC-Bold.woff2') format('woff2'),
+       url('../fonts/SchoolBookC-Bold.woff') format('woff'),
+       url('../fonts/SchoolBookC-Bold.ttf') format('truetype'),
+       url('../fonts/SchoolBookC-Bold.svg#SchoolBookC-Bold') format('svg'),
+       url('../fonts/SchoolBookC-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SchoolBookC';
+  src: url('../fonts/SchoolBookC.eot');
+  src: url('../fonts/SchoolBookC.woff2') format('woff2'),
+       url('../fonts/SchoolBookC.woff') format('woff'),
+       url('../fonts/SchoolBookC.ttf') format('truetype'),
+       url('../fonts/SchoolBookC.svg#SchoolBookC') format('svg'),
+       url('../fonts/SchoolBookC.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
