@@ -1,3 +1,5 @@
+
+
   $( function() {
     $( "#slider" ).slider();
   } );
@@ -295,3 +297,4 @@ function load(){
   });
 
 }
+
