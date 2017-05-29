@@ -35,7 +35,7 @@ img { max-width: 100%; }
 
 #progress { position: fixed; top: 0; left: 0; color: #ccc; z-index: 10000; display: none; }
 
-.cover, #saas, #emag, #emag .menu-bg { background-size: cover !important; background-attachment: fixed !important; background-position: top center !important; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; }
+.cover, #saas { background-size: cover !important; background-attachment: fixed !important; background-position: top center !important; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; }
 
 .overlay { background: #353535; position: absolute; width: 100%; height: 100%; display: none; }
 
@@ -112,7 +112,7 @@ h1 { font-size: 38px; line-height: 1.2; text-align: center; margin-bottom: 30px;
 
 h2 { font-size: 38px; margin-bottom: 30px; letter-spacing: 1px; line-height: 1.2; }
 
-h3 { font-size: 32px; line-height: 1.1; margin-bottom: 30px; letter-spacing: 1px; }
+h3 { font-size: 32px; line-height: 1.1; margin-bottom: 25px; letter-spacing: 1px; }
 
 h4 { font-size: 24px; margin-bottom: 20px; font-family: "GTWalsheimProBold", sans-serif; }
 
@@ -126,7 +126,9 @@ p { font-family: "GTWalsheimProRegular", sans-serif; font-size: 16px; line-heigh
 
 .txt_white { color: #fff; }
 
-div.white { background: #f5f5f5; -webkit-box-shadow: 0 4px 4px 0 rgba(33, 33, 33, 0.2); -moz-box-shadow: 0 4px 4px 0 rgba(33, 33, 33, 0.2); box-shadow: 0 4px 4px 0 rgba(33, 33, 33, 0.2); padding: 52px 50px 60px; margin: 30px auto; float: left; width: 100%; }
+.txt_black { color: #000; }
+
+div.white { background: #f5f5f5; -webkit-box-shadow: 0 4px 4px 0 rgba(33, 33, 33, 0.2); -moz-box-shadow: 0 4px 4px 0 rgba(33, 33, 33, 0.2); box-shadow: 0 4px 4px 0 rgba(33, 33, 33, 0.2); padding: 52px 50px; margin: 30px auto; float: left; width: 100%; }
 div.white + .white { margin-top: 60px; }
 div.white p { margin-bottom: 20px; }
 
@@ -302,6 +304,7 @@ figure.effect-sadie:hover figcaption::before { opacity: 1; -webkit-transform: tr
 .gallery .fotorama__wrap .fotorama__nav-wrap .fotorama__nav--thumbs .fotorama__nav__frame { padding: 4px 2px; }
 .gallery .fotorama__wrap .fotorama__nav-wrap .fotorama__thumb-border { border: 4px solid #876253; }
 
+.wrap_w { margin-bottom: 30px; }
 .wrap_w .fotorama__nav-wrap { background: #fff; }
 
 .dark_blue { background: #314c5e; color: #fff; padding-top: 0px; padding-bottom: 140px; margin-bottom: 30px; }
@@ -318,6 +321,7 @@ figure.effect-sadie:hover figcaption::before { opacity: 1; -webkit-transform: tr
 .dark_blue .item img { margin-bottom: 30px; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; border-radius: 50%; -webkit-box-shadow: 0 10px 10px 0 rgba(33, 33, 33, 0.4); -moz-box-shadow: 0 10px 10px 0 rgba(33, 33, 33, 0.4); box-shadow: 0 10px 10px 0 rgba(33, 33, 33, 0.4); }
 
 .white .item { margin-bottom: 60px; padding-bottom: 10px; overflow: hidden; }
+.white .item:last-child { margin-bottom: 30px; }
 .white .item .left .btn { margin-top: 30px; -webkit-box-shadow: 0 4px 4px 0 rgba(33, 33, 33, 0.2); -moz-box-shadow: 0 4px 4px 0 rgba(33, 33, 33, 0.2); box-shadow: 0 4px 4px 0 rgba(33, 33, 33, 0.2); }
 .white .item .sideright { float: right; width: 39%; }
 .white .item .sideright img { margin-bottom: 10px; }
@@ -328,6 +332,7 @@ figure.effect-sadie:hover figcaption::before { opacity: 1; -webkit-transform: tr
 .white .item .sideright ul { text-transform: uppercase; padding-left: 70px; position: relative; margin-top: 20px; letter-spacing: 1px; font-size: 14px; }
 .white .item .sideright ul li { margin-bottom: 5px; }
 .white .item .sideright ul span { position: absolute; top: 0; left: 0; color: #818181; }
+.white .item .block_out { margin-top: 30px; }
 .white .item .block_out div { font-size: 20px; line-height: 30px; margin-bottom: 20px; font-family: "GTWalsheimProLight", sans-serif; float: left; }
 .white .item .block_out div span { font-size: 77px; line-height: 70px; display: block; }
 .white .item .block_out p { float: left; width: 70%; max-width: 350px; font-family: "GTWalsheimProLight", sans-serif; font-size: 14px; padding-left: 20px; }
@@ -352,16 +357,18 @@ figure.effect-sadie:hover figcaption::before { opacity: 1; -webkit-transform: tr
 
 #corp_lib { background-color: #51668C; }
 #corp_lib h1 { margin-bottom: 260px; }
-#corp_lib .btn { background: #51668C; color: #fff; border: none; -webkit-box-shadow: 0 5px 5px 0 rgba(33, 33, 33, 0.6); -moz-box-shadow: 0 5px 5px 0 rgba(33, 33, 33, 0.6); box-shadow: 0 5px 5px 0 rgba(33, 33, 33, 0.6); }
+#corp_lib .btn { background: #51668C; color: #fff; border: none; }
 #corp_lib .sideright div { color: #51668C; }
 
 #books { background-color: #51668C; padding: 90px 0; }
+@media only screen and (min-width: 481px) and (max-width: 1299px) { #books { padding: 60px 0; } }
 #books h3 { font-size: 32px; }
 #books .right { text-align: center; }
 #books .right img { display: block; margin-left: auto; margin-right: auto; margin-bottom: 20px; }
 #books .right .btn { display: inline-block; border: none; }
 
 #books_2 { background-color: #51668C; padding: 190px 0; }
+@media only screen and (min-width: 481px) and (max-width: 1299px) { #books_2 { padding: 60px 0; } }
 #books_2 h3 { font-size: 32px; }
 
 #books_3 { background-color: #51668C; padding: 190px 0; }
@@ -399,7 +406,7 @@ figure.effect-sadie:hover figcaption::before { opacity: 1; -webkit-transform: tr
 #app h3 { font-size: 32px; max-width: 500px; }
 
 #mybook { background-color: #876253; }
-#mybook .btn { background: #876253; color: #fff; border: none; -webkit-box-shadow: 0 5px 5px 0 rgba(33, 33, 33, 0.6); -moz-box-shadow: 0 5px 5px 0 rgba(33, 33, 33, 0.6); box-shadow: 0 5px 5px 0 rgba(33, 33, 33, 0.6); }
+#mybook .btn { background: #876253; color: #fff; border: none; }
 #mybook .sideright div { color: #876253; }
 
 .grid_book { width: auto; margin: 0 auto; }
@@ -423,9 +430,9 @@ figure.effect-sadie:hover figcaption::before { opacity: 1; -webkit-transform: tr
 .steps_v .item h4 { display: inline-block; margin-left: 20px; vertical-align: middle; font-family: "GTWalsheimProBold", sans-serif; }
 .steps_v .item h4 span { display: block; font-size: 14px; font-family: "GTWalsheimProRegular", sans-serif; }
 
-.logos { margin: 30px 0 90px 0; text-align: justify; text-align-last: justify; -moz-text-align-last: justify; }
+.logos { margin: 30px 0 60px 0; text-align: justify; text-align-last: justify; -moz-text-align-last: justify; }
 .logos:after { width: 100%; height: 0; visibility: hidden; overflow: hidden; content: ''; display: inline-block; }
-.logos .item { display: inline-block; margin: 30px; }
+.logos .item { display: inline-block; margin: 20px 30px 20px 0; }
 
 .advert_books { overflow: hidden; position: relative; margin-top: -130px; margin-bottom: 30px; }
 .advert_books .item { float: left; width: 24%; text-align: center; }
@@ -491,7 +498,7 @@ figure.effect-sadie:hover figcaption::before { opacity: 1; -webkit-transform: tr
 
 .calc p { margin-bottom: 30px; }
 .calc .row { overflow: hidden; margin: 8px 0; font-size: 16px; padding: 8px 0; vertical-align: middle; }
-.calc .row label { display: inline-block; max-width: 170px; width: 30%; margin-right: 20px; vertical-align: middle; }
+.calc .row label { display: inline-block; max-width: 170px; width: 30%; margin-right: 20px; vertical-align: middle; font-family: "GTWalsheimProBold", sans-serif; }
 .calc .row a { display: inline-block; text-decoration: none; border: 1px solid #ccc; padding: 5px 10px; font-size: 14px; margin-right: 10px; -webkit-border-radius: 6px; -moz-border-radius: 6px; -ms-border-radius: 6px; border-radius: 6px; }
 .calc .right { width: 60%; float: none; display: inline-block; }
 .calc .right #slider { width: 70%; display: inline-block; }
@@ -665,7 +672,7 @@ figure.effect-sadie:hover figcaption::before { opacity: 1; -webkit-transform: tr
 .filtr_row a:hover { background: #ff8827; color: #fff; }
 
 .wrap_w { background: #fff; }
-.wrap_w .container { padding: 40px; }
+.wrap_w .container { padding: 60px 40px; }
 .wrap_w .fotorama__nav-wrap { background: #fff !important; }
 .wrap_w .fotorama__nav-wrap .fotorama__thumb-border { border: 4px solid #51668C !important; }
 

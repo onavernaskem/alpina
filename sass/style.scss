@@ -402,7 +402,7 @@ h2 {
 h3 {
 	font-size: 32px;
 	line-height: 1.1;
-	margin-bottom: 30px;
+	margin-bottom: 25px;
 	letter-spacing: 1px;
 }
 
@@ -432,10 +432,13 @@ p {
 .txt_white {
 	color: #fff;
 }
+.txt_black {
+	color: #000;
+}
 div.white {
 	background: #f5f5f5;
 	@include box-shadow(0, 4px, 4px, 0, rgba(33,33,33,0.2));
-	padding: 52px 50px 60px;
+	padding: 52px 50px;
 	margin: 30px auto;
 	float: left;
 	width: 100%;
@@ -1262,6 +1265,7 @@ html .ui-button.ui-state-disabled:active {
 		}
 
 		.wrap_w {
+			margin-bottom: 30px;
 			.fotorama__nav-wrap {
 				background: #fff;
 			}
@@ -1331,6 +1335,9 @@ html .ui-button.ui-state-disabled:active {
 				margin-bottom: 60px;
 				padding-bottom: 10px;
 				overflow: hidden;
+				&:last-child {
+					margin-bottom: 30px;
+				}
 				.left {
 					.btn {
 						margin-top: 30px;
@@ -1392,6 +1399,7 @@ html .ui-button.ui-state-disabled:active {
 					}
 				}
 				.block_out {
+					margin-top: 30px;
 					div {
 						font-size: 20px;
 						line-height: 30px;
@@ -1516,7 +1524,7 @@ html .ui-button.ui-state-disabled:active {
 				background:$blue; 
 				color: #fff;
 				border: none;
-				@include box-shadow(0, 5px, 5px, 0, rgba(33,33,33,0.6));
+				// @include box-shadow(0, 5px, 5px, 0, rgba(33,33,33,0.6));
 			}
 
 			.sideright div {
@@ -1527,6 +1535,7 @@ html .ui-button.ui-state-disabled:active {
 		#books {
 			background-color: $blue;
 			padding: 90px 0;
+				@include respond-to(medium-screens) { padding: 60px 0;}
 			h3 {
 				font-size: 32px;
 			}
@@ -1550,6 +1559,7 @@ html .ui-button.ui-state-disabled:active {
 		#books_2 {
 			background-color:  $blue;
 			padding: 190px 0;
+				@include respond-to(medium-screens) { padding: 60px 0;}
 			h3 {
 				font-size: 32px;
 			}
@@ -1639,10 +1649,6 @@ html .ui-button.ui-state-disabled:active {
 			padding: 60px 0 60px 0;
 			color: #fff;
 			height: 680px;
-			@extend .cover;
-			.menu-bg {
-				@extend .cover;	
-			}
 			h3 {
 				font-size: 32px;
 				color: #fff;
@@ -1703,25 +1709,12 @@ html .ui-button.ui-state-disabled:active {
 				background:$brown; 
 				color: #fff;
 				border: none;
-				@include box-shadow(0, 5px, 5px, 0, rgba(33,33,33,0.6));
+				// @include box-shadow(0, 5px, 5px, 0, rgba(33,33,33,0.6));
 			}
 			.sideright div {
 				color: $brown;
 			}
 		}
-
-		#auditory {
-
-		}
-
-		#solutions {
-
-
-		}
-
-
-
-
 
 
 		.grid_book {
@@ -1830,7 +1823,7 @@ html .ui-button.ui-state-disabled:active {
 
 
 		.logos {
-			margin: 30px 0 90px 0;
+			margin: 30px 0 60px 0;
 			text-align: justify;
 			text-align-last: justify;
 			-moz-text-align-last: justify;
@@ -1846,7 +1839,7 @@ html .ui-button.ui-state-disabled:active {
 			}
 			.item {
 				display: inline-block;
-				margin: 30px;
+				margin: 20px 30px 20px 0;
 			}
 
 		}
@@ -2137,6 +2130,7 @@ html .ui-button.ui-state-disabled:active {
 					width: 30%;
 					margin-right: 20px;
 					vertical-align: middle;
+					font-family: $font_bold;
 
 				}
 				a {
@@ -2960,7 +2954,7 @@ html .ui-button.ui-state-disabled:active {
 	.wrap_w {
 		background: #fff;
 		.container {
-			padding: 40px;
+			padding: 60px 40px;
 		}
 		.fotorama__nav-wrap {
 			background: #fff !important;
