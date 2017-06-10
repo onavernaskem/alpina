@@ -3,9 +3,9 @@
 
 
 $orange: #ff8827;
-$brown: #876253;
-$green: #5a8366;
-$blue: #51668C;
+$brown: #ce9d89;
+$green: #82ab8e;
+$blue: #8aacc3;
 $gray: #ADBBC0;
 $dark: #353535;
 $link_hover: #ffd8b8;
@@ -271,10 +271,11 @@ img {
 
 .btn {
 	font-size: 16px;
+	font-family: $font_light;
 	text-transform: uppercase;
 	letter-spacing: 1.5px;
-	border: 1px solid  #c4c4c4;
-	padding: 10px 20px;
+	// border: 1px solid  #c4c4c4;
+	padding: 12px 45px;
 	display: inline-block;
 	color: #000;
 	background: #fff;
@@ -284,35 +285,41 @@ img {
 		color: #fff !important;
 		border-color: transparent !important;
 	}
-}
-
-.btn.white {
-	background: #f5f5f5;
-	color: #000;
-	border: 1px solid #c4c4c4;
-	@include box-shadow(0, 4px, 4px, 0, rgba(33,33,33,0));
-}
-
-.btn.primary {
-	background: $orange !important;
-	&:hover {
-		background: #f59948;
+	&.white {
+		background: #f5f5f5;
+		color: #000;
+		border: 1px solid #c4c4c4;
+		@include box-shadow(0, 4px, 4px, 0, rgba(33,33,33,0));
 	}
-}
-
-
-
-.btn.more {
-	background: transparent url("../img/refresh.png") 10px 50% no-repeat;
-	padding-left: 40px;
-	color: #fff;
-	border: 1px solid #fff !important;
-	clear: both;
-	&:hover {
-		background:  #f59948 url("../img/refresh.png") 10px 50% no-repeat !important;
-		border: 1px solid  #f59948 !important;
+	&.primary {
+		background: $orange !important;
+		&:hover {
+			background: #f59948;
+		}
 	}
+
+	&.notactive {
+		border: none;
+		cursor: default;
+		background: #b5b5b5 !important;
+		color: #fff;
+
+
+	}
+	&.more {
+		background: transparent url("../img/refresh.png") 10px 50% no-repeat;
+		padding-left: 40px;
+		color: #fff;
+		border: 1px solid #fff !important;
+		clear: both;
+		&:hover {
+			background:  #f59948 url("../img/refresh.png") 10px 50% no-repeat !important;
+			border: 1px solid  #f59948 !important;
+		}
+	}
+
 }
+
 
 
 
@@ -337,7 +344,7 @@ img {
 hr {
 	clear: both;
 	width: 100%;
-	margin: 60px 0  40px 0;
+	margin: 40px 0;
 	height: 1px;
 	background: #c4c4c4;
 	border: none;
@@ -438,20 +445,24 @@ p {
 div.white {
 	background: #f5f5f5;
 	@include box-shadow(0, 4px, 4px, 0, rgba(33,33,33,0.2));
-	padding: 52px 50px;
-	margin: 30px auto;
-	float: left;
+	padding: 50px;
+	margin: 30px auto 60px;
+	overflow: hidden;
+	// float: left;
 	width: 100%;
 	& + .white {
-		margin-top: 60px;
+		// margin-top: 60px;
 	}
-	// h3 {
-	// 	font-size: 32px;
-	// }
+
 	p {
 		margin-bottom: 20px;
 	}
 }
+div.white.advert {
+	margin-top: 135px;
+	overflow: visible;
+}
+
 
 .hspace {
 	height: 60px;
@@ -507,6 +518,7 @@ div.white {
 		page-break-inside: avoid;
 		break-inside: avoid;
 		display: block !important;
+
 		h4 {
 			font-size: 18px;
 			font-family: $font-bold;
@@ -788,9 +800,8 @@ html .ui-button.ui-state-disabled:active {
 			float: left;
 			overflow: hidden;
 			margin: 0 0 20px 0;
-			min-width: 100%;
+			width: 100%;
 			max-height: 360px;
-			width: 48%;
 			text-align: center;
 			cursor: pointer;
 			img {
@@ -1076,7 +1087,8 @@ html .ui-button.ui-state-disabled:active {
 
 
 		#cases {
-			padding-bottom: 0px;
+			padding-bottom: 30px;
+			padding-top: 0;
 			clear: both;
 			width: 100%;
 			text-align: center;
@@ -1228,23 +1240,41 @@ html .ui-button.ui-state-disabled:active {
 		.gallery {
 			clear: both;
 			position: relative;
-			width: 100%;
+			background:#466172;
+			// width: 100%;
 			.container {
 				position: absolute;
-				top: 60px;
-				left: 10%;
+				top: 10%;
+				left: 50%;
+				margin-left: -500px;
 				z-index: 10;
 			}
 			h2 {
 				color: #fff;
-
+				font-size: 32px;
 			}
 
 			.fotorama__wrap {
 				width: 100% !important;
-				img {
-					width: 100%;
+				// img {
+				// 	width: 100%;
+				// }
+				.fotorama__html {
+
+					.txt {
+						width: 30%;
+						min-width: 300px;
+						max-width: 500px;
+						color: #fff;
+						float: right;
+						margin: 15% 100px 0 0;
+
+						p {
+							margin-bottom: 30px;
+						}
+					}
 				}
+
 
 				.fotorama__nav-wrap {
 					background: #192730;
@@ -1332,12 +1362,12 @@ html .ui-button.ui-state-disabled:active {
 
 		.white {
 			.item {
-				margin-bottom: 60px;
-				padding-bottom: 10px;
+				// margin-bottom: 60px;
+				padding-bottom: 30px;
 				overflow: hidden;
-				&:last-child {
-					margin-bottom: 30px;
-				}
+				// &:last-child {
+				// 	margin-bottom: 30px;
+				// }
 				.left {
 					.btn {
 						margin-top: 30px;
@@ -1347,7 +1377,7 @@ html .ui-button.ui-state-disabled:active {
 				
 				.sideright {
 					float: right;
-					width: 39%;	
+					width: 33%;	
 					img {
 						
 						margin-bottom: 10px;
@@ -1428,7 +1458,7 @@ html .ui-button.ui-state-disabled:active {
 					float: left;
 					width: 60%;
 					p {
-						max-width: 450px;
+						// max-width: 450px;
 					}
 				}
 				// h3 {
@@ -1535,7 +1565,7 @@ html .ui-button.ui-state-disabled:active {
 		#books {
 			background-color: $blue;
 			padding: 90px 0;
-				@include respond-to(medium-screens) { padding: 60px 0;}
+			@include respond-to(medium-screens) { padding: 60px 0;}
 			h3 {
 				font-size: 32px;
 			}
@@ -1559,7 +1589,7 @@ html .ui-button.ui-state-disabled:active {
 		#books_2 {
 			background-color:  $blue;
 			padding: 190px 0;
-				@include respond-to(medium-screens) { padding: 60px 0;}
+			@include respond-to(medium-screens) { padding: 60px 0;}
 			h3 {
 				font-size: 32px;
 			}
@@ -1723,16 +1753,20 @@ html .ui-button.ui-state-disabled:active {
 			
 			.item {
 				display: inline-block;
-				width: 30%;
+				width: 45%;
 				margin-left:5%;
-				// text-align: center;
 				color: #fff;
-				padding-bottom: 90px;
+				padding-bottom: 60px;
 
 				&:nth-child(1) {
 					float: left;
-					width: 45%;
-					margin-left: 0%;
+					width: 50%;
+					margin-left: 0;
+					// margin-right: 60px;
+					img {
+						max-width: 540px;
+						width: 90%;
+					}
 				}
 				
 				&:nth-child(3) {
@@ -1742,15 +1776,18 @@ html .ui-button.ui-state-disabled:active {
 					color: #000;
 					margin-bottom: 10px;
 					text-transform: uppercase;
+					font-family: $font_regular;
 				}
 				img {
+					max-width: 250px;
+					width: 70%;
 					margin-bottom: 30px;
 					@include box-shadow(0, 10px, 10px, 0, rgba(33,33,33,0.4));
 				}
 				p {
 					font-size: 16px;
 					line-height: 1.5;
-					width: 80%;
+					// width: 80%;
 				}
 				.tabs {
 					text-align: left;
@@ -1863,9 +1900,12 @@ html .ui-button.ui-state-disabled:active {
 			margin: 0 auto;
 			.item {
 				overflow: hidden;
-				padding-bottom: 55px;
+				padding-bottom: 40px;
 				margin-bottom: 0;
 				// padding-top: 20px;
+				&:last-child {
+					padding-bottom: 10px;
+				}
 				.left {
 					font-size: 14px;
 					width: 40%;
@@ -1876,7 +1916,7 @@ html .ui-button.ui-state-disabled:active {
 					}
 					.name {
 						text-transform: uppercase;
-						margin-bottom: 15px;
+						margin-bottom: 10px;
 						font-size: 16px;
 						letter-spacing: 1px;
 
@@ -1891,6 +1931,9 @@ html .ui-button.ui-state-disabled:active {
 					width: 58%;
 					p {
 						max-width: 600px;
+					}
+					.btn {
+						margin-top: 0;
 					}
 				}
 			}
@@ -2063,13 +2106,18 @@ html .ui-button.ui-state-disabled:active {
 		}
 
 		.faq {
-			margin-top: 20px !important;
-			padding-bottom: 150px !important;
+
+			.faq_wrap {
+				// padding-bottom: 90px;
+				overflow: hidden;
+
+			}
+			
 			.left {
 				width: 25%;
 				font-size: 14px;
 				color: #424c4f;
-				position: relative;
+				// position: relative;
 				@include respond-to(handhelds) { 
 					display: none;
 				}
@@ -2077,8 +2125,9 @@ html .ui-button.ui-state-disabled:active {
 					padding-left: 20px;	
 					p {
 						font-family: $font_light;
-						margin-bottom: 8px;
+						margin-bottom: 15px;
 						line-height: 1.2;
+						font-size: 14px;
 					}
 					a {
 						text-decoration: none;
@@ -2101,15 +2150,15 @@ html .ui-button.ui-state-disabled:active {
 				@include respond-to(handhelds) { 
 					width: 100%;
 				}
-			}
+				.item {
 
-			.item {
-				margin-bottom: 20px;
-				p {
-					margin-bottom: 0;
-				}
-				strong {
-					font-size: 15px;
+					p {
+						font-size: 14px;
+						margin-bottom: 0;
+					}
+					strong {
+						font-size: 15px;
+					}
 				}
 			}
 		}
@@ -2130,7 +2179,7 @@ html .ui-button.ui-state-disabled:active {
 					width: 30%;
 					margin-right: 20px;
 					vertical-align: middle;
-					font-family: $font_bold;
+					// font-family: $font_bold;
 
 				}
 				a {
@@ -2163,6 +2212,7 @@ html .ui-button.ui-state-disabled:active {
 				line-height: 50px;
 				display: inline-block;
 				vertical-align: top;
+				margin-left: -30px;
 			}
 			.btn {
 				display: inline-block;
@@ -2273,6 +2323,7 @@ html .ui-button.ui-state-disabled:active {
 				margin-top: 40px;
 				background: none;
 				color: #000;
+				@extend .btn.white;
 
 			}
 		}
@@ -2484,7 +2535,7 @@ html .ui-button.ui-state-disabled:active {
 		.item {
 			display: inline-block;
 			width: 25%;
-			margin-bottom: 60px;
+			margin-bottom: 40px;
 			font-size: 14px;
 			img {
 				display: block;
@@ -2524,6 +2575,7 @@ html .ui-button.ui-state-disabled:active {
 
 	.tabs {
 		font-size: 16px;
+		margin-bottom: 60px;
 		img {
 			@include box-shadow(5px, 10px, 15px, 0, rgba(33,33,33,0.2));
 		}
@@ -2672,7 +2724,7 @@ html .ui-button.ui-state-disabled:active {
 			.right{
 				width: 60%;
 				padding-left: 30px;
-				padding-right: 30px;
+				padding-right: 90px;
 				p {
 					font-size: 20px;
 					line-height: 1.2;
@@ -2682,55 +2734,125 @@ html .ui-button.ui-state-disabled:active {
 				.btn {
 					margin-top: 10px;
 				}
-				input[type="text"] {
-					background: none;
-					border: 1px solid rgba(0,0,0,.2);
-					height: 52px;
-					padding: 0 10px;
-					display: block;
-					width: 100%;
-					max-width: 400px;
-					margin-bottom: 20px;
-					color: #fff;
-					outline: none;
-					font-size: 16px;
-					
-				}
-				::-webkit-input-placeholder {color:#fff; opacity: .4;}
-				::-moz-placeholder          {color:#fff; opacity: .4;}
-				:-moz-placeholder           {color:#fff; opacity: .4;}
-				:-ms-input-placeholder      {color:#fff; opacity: .4;}
+				
+			}
+		}
+	}
+
+	.mfp-bg {
+		background: rgba(0,0,0,.6);
+	}
+	.white-popup-block{
+		background: #fff;
+		padding: 40px;
+		width: 580px;
+		margin: 0 auto;
+
+		p {
+			margin: 0 0 20px;
+		}
+	}
+.mfp-close-btn-in .mfp-close{
+width: 60px;
+height: 60px;
+text-indent: -9999px;
+background: url(../img/close.png) no-repeat;
+}
+
+
+	input[type="text"] {
+		background: none;
+		border: 1px solid rgba(0,0,0,.2);
+		height: 52px;
+		padding: 0 10px;
+		display: block;
+		width: 100%;
+		max-width: 400px;
+		margin-bottom: 20px;
+		color: #fff;
+		outline: none;
+		font-size: 16px;
+
+	}
+
+	.input_row {
+		position: relative;
+	}
+	#error_mes {
+		width: 140px; 
+		margin:5px 0px;
+		color: #fff; 
+		padding: 10px;
+		background: #da280c; 
+		display:none;  
+		position: absolute;
+		right: -10px;
+		top: 0;
+	}
+	#error_mes:after {
+		right: 100%;
+		top: 50%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border-color: rgba(218, 40, 12, 0);
+		border-right-color: #da280c;
+		border-width: 10px;
+		margin-top: -10px;
+	}
+	.success_message {
+		border: 1px solid #fff;
+		width: 90%;
+		display: block;
+		padding: 44px 90px;
+		margin:100px auto;
+		text-align: center;
+		p {
+			margin-bottom: 8px;
+		}
+		strong {
+			font-size: 20px;
+		}
+	}
+
+	::-webkit-input-placeholder {color:#000; opacity: .4;}
+	::-moz-placeholder          {color:#000; opacity: .4;}
+	:-moz-placeholder           {color:#000; opacity: .4;}
+	:-ms-input-placeholder      {color:#000; opacity: .4;}
 				// :focus::-webkit-input-placeholder {color: transparent}
 				// :focus::-moz-placeholder          {color: transparent}
 				// :focus:-moz-placeholder           {color: transparent}
 				// :focus:-ms-input-placeholder      {color: transparent}
 
-			}
-		}
-	}
 
-	.video {
-		position: relative;
-		width: 380px;
-		height: 255px;
-		text-align: center;
-		img {
-			top: 0;
-			left: 0;
-			position: absolute;
-		}
-		.play_btn {
-			background: url("../img/btn-play.png") no-repeat;
-			width: 44px;
-			height: 55px;
-			display: inline-block;
-			z-index: 11;
-			text-indent: -9999px;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			margin-left: -22px;
-			margin-top: -27px;
+
+
+
+				.video {
+					position: relative;
+					width: 380px;
+					height: 255px;
+					text-align: center;
+					img {
+						top: 0;
+						left: 0;
+						position: absolute;
+					}
+					.play_btn {
+						background: url("../img/btn-play.png") no-repeat;
+						width: 44px;
+						height: 55px;
+						display: inline-block;
+						z-index: 11;
+						text-indent: -9999px;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						margin-left: -22px;
+						margin-top: -27px;
 			// @include vertical-align();
 			&:hover {
 				background: url("../img/btn-play-hover.png") no-repeat;
@@ -2747,6 +2869,7 @@ html .ui-button.ui-state-disabled:active {
 		}
 		.item {
 			margin-bottom: 10px;
+			padding-bottom: 0;
 			
 			p {
 				font-family: $font_bold;
@@ -2782,6 +2905,10 @@ html .ui-button.ui-state-disabled:active {
 		width: 260px;
 		margin: 10px;
 		@include box-shadow(5px, 5px, 5px, 0, rgba(33,33,33,0.2));
+	}
+
+	.twentytwenty-overlay:hover {
+		background: rgba(0, 0, 0, 0) !important;
 	}
 
 	.footer {
@@ -2888,6 +3015,45 @@ html .ui-button.ui-state-disabled:active {
 
 	}
 
+	.distr_map {
+		margin: 30px 0;
+		text-align: center;
+		color: #fff;
+		background: url(../img/map.png) 50% 50% no-repeat;
+		height: 680px;
+		clear: both;
+		h3 {
+			font-size: 32px;
+			padding-top: 290px;
+		}
+		p {
+			width: 400px;
+			margin: 15px auto;
+			font-size: 16px;
+		}
+		.fact {
+			overflow: hidden;
+			// width: 350px;
+			margin: 0px auto;
+			.num {
+				font-size: 70px;
+				float: left;
+				width: 50%;
+				font-family: $font_bold;
+				color: $orange;
+				text-align: right;
+			}
+			p {
+				float: left;
+				width: 50%; 
+				line-height: 1.2;
+				text-align: left;
+				padding-left: 15px;
+			}
+		}
+
+	}
+
 
 	.map {
 		h2 {
@@ -2923,7 +3089,7 @@ html .ui-button.ui-state-disabled:active {
 	.filtr_wrap {
 		background: #fff;
 		margin: 40px auto 0px;
-		padding: 32px 36px;
+		padding: 32px 36px 20px;
 		@include box-shadow(0px, 5px, 5px, 0, rgba(33,33,33,0.2));
 	}
 

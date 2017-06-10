@@ -3,3 +3,23 @@
 .section  .menu-bg 						{max-width: 100%; position: absolute;}
 /*section, .menu-bg{ overflow: hidden1; }*/
 .opacity{opacity: .8;}
+
+.fixed_top {
+    position: fixed !important;
+    top: 100px !important;
+}
+.home-faq-list-wrapper.fixed_bottom {
+    position: absolute !important;
+    top: auto !important;
+    bottom: 0 !important;
+}
+.faq_wrap {
+    position: relative;
+}
+
+/*.backstretch {
+	-webkit-transform:translateZ(1px);
+      -moz-transform:translateZ(1px);
+      -o-transform:translateZ(1px);
+      transform:translateZ(1px);
+}*/

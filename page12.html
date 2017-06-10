@@ -132,19 +132,23 @@
     <div class="right" >
       <p>Оставьте контакты, Ольга свяжется с вами
         и расскажет все, что знает о издании книг на заказ</p>
-        <form action="">
-          <input type="text" placeholder="Имя">
-          <input type="text" placeholder="Компания">
-          <input type="text" placeholder="Электронная почта">
-        </form>
-        <a href="" class="btn white">ОСТАВИТЬ ЗАЯВКУ</a>
+               <form action="" method="POST">
+
+          
+         <div class="input_row"><input type="text" name="name" placeholder="Имя"></div> 
+         <div class="input_row"><input type="text" name="company" placeholder="Компания"></div>
+         <div class="input_row"><input type="text" name="email" placeholder="Электронная почта"> <div id="error_mes"> </div></div> 
+
+         <input type="submit" name="submit" class="btn white" value="Отправить"/>
+       </form>
+      
       </div>
     </div>
   </div>
 
   <h2 class="center">Возможно, вам будут интересны</h2>
-  <div class="grid colmns-3">
-    <div class="item">
+  <div class="grid ">
+    <div class="item w30">
      <figure class="effect-sadie" style="background-image: url(img/pr1.png);">
       <img src="img/dot.png" alt=""/>
       <figcaption>
@@ -153,7 +157,7 @@
       </figcaption>     
     </figure>
   </div>
-  <div class="item">  
+  <div class="item w30">  
     <figure class="effect-sadie" style="background-image: url(img/bg-gref.png);">
       <img src="img/dot.png" alt=""/>
       <figcaption>
@@ -162,7 +166,7 @@
       </figcaption>     
     </figure>
   </div>
-  <div class="item">        
+  <div class="item w30">        
     <figure class="effect-sadie" style="background-image: url(img/tp.png);">
       <img src="img/dot.png" alt=""/>
       <figcaption>

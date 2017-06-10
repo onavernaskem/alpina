@@ -10,6 +10,11 @@
       "transition": "opacity 1s ease-in-out"
     });
 
+    // faq scroll
+    faqNav.init();
+    fixObj.init();
+    scrollTo();
+
     $(window).on("backstretch.show", function (e, instance, index) {
         syncBg()
         $('.overlay').removeClass('show');
@@ -85,7 +90,7 @@
 (function($) {
     document.addEventListener("touchmove", syncBg, true);
     window.addEventListener("scroll", syncBg, true);
-    window.addEventListener("scroll", listIndicate, true);
+    //window.addEventListener("scroll", listIndicate, true);
     $('[data-bg]').click(function (e) {
         e.preventDefault();
         changeBg( $(this) );
@@ -194,17 +199,19 @@ function listIndicate() {
     var faq_pointer_height = $pointer.height() ;
 
     console.log(faq_height + ' '  +is_top)
+    var bottomstopeffect = -450;
+    var correct = -110;
 
-    if ( is_top < 0 && is_top > -640 ) {
+    if ( is_top < 0 && is_top > bottomstopeffect ) {
       $i.css({position: 'fixed', 'top': 120, 'width': $section.width() / 4});
       console.log( (faq_height + is_top) / faq_height )
       $pointer.css({position: 'fixed', 'top': 120 + faq_nav_height * ( 1 - (faq_height + is_top) / faq_height )});
     }
-    else if(is_top < -640) {
-      $i.css({position: 'absolute', 'top': faq_nav_height + 80});
-      var ptop = faq_nav_height + 80 + faq_nav_height * ( 1 - (faq_height + is_top) / faq_height );
-      if(ptop > 2*faq_nav_height + 80 - faq_pointer_height) {
-        ptop = 2*faq_nav_height + 80 - faq_pointer_height;
+    else if(is_top < bottomstopeffect) {
+      $i.css({position: 'absolute', 'top': faq_nav_height + correct});
+      var ptop = faq_nav_height + correct + faq_nav_height * ( 1 - (faq_height + is_top) / faq_height );
+      if(ptop > 2*faq_nav_height + correct - faq_pointer_height) {
+        ptop = 2*faq_nav_height + correct - faq_pointer_height;
       }
       $pointer.css({position: 'absolute',top: ptop });
     }
@@ -298,3 +305,190 @@ function load(){
 
 }
 
+
+var forms = {
+    errors: {empty: 'Поле не заполнено', email: 'Это не почта' },
+    checkemail: function(emailAddress) {
+        var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+        return pattern.test(emailAddress);        
+    },
+    prevalidate: function () {
+        $('[name="name"], [name="email"]').css('border', 'rgba(0, 0, 0, 0.2) 1px solid');
+    },
+    makeerrfield: function(name) {
+        $('[name="'+name+'"]').css('border', '#ff6850 1px solid');
+        $('[name="'+name+'"]').css('color', '#ff6850'); 
+    }, 
+    showError: function( name, msg ) {
+        forms.makeerrfield(name);
+        $("#error_mes").html(msg); 
+        $('[name="'+name+'"]').after( $("#error_mes") );
+        $("#error_mes").fadeIn("slow"); 
+    },
+    validate: function() {
+        forms.prevalidate();
+        if( !$('[name="name"]').val() ) {
+            forms.showError('name', forms.errors.empty );  
+            return false;  
+        }
+        if( !$('[name="email"]').val() ) {
+            forms.showError('email', forms.errors.empty ); 
+            return false;   
+        } 
+        if( !forms.checkemail( $('[name="email"]').val() ) ) {
+            forms.showError('email', forms.errors.email );
+            return false;    
+        }  
+
+        return true;         
+    }
+}
+
+function validate() {
+    return forms.validate();
+}
+
+/*
+  $(function(){
+    var field = new Array("name", "email");
+    $("form").submit(function() { 
+      var error=0; 
+      $("form").find(":input").each(function() {
+        for(var i=0;i<field.length;i++){ 
+          if($(this).attr("name")==field[i]){ 
+
+            if(!$(this).val()){
+              $(this).css('border', '#ff6850 1px solid');
+              $(this).css('color', '#ff6850');
+              error=1;      
+
+            }
+            else{
+              $(this).css('border', 'rgba(0, 0, 0, 0.2) 1px solid');
+            }
+
+          }               
+        }
+      })
+
+      var email = $("#email").val();
+        if(!isValidEmailAddress(email)){
+        error=2;
+        $("#email").css('border', '#ff6850 1px solid');
+      }
+
+
+      if(error==0){ 
+        return true;
+      }
+      else{
+        if(error==1)  err_text="Поле не заполнено";
+        if(error==2)  err_text="Это не почта";
+        $("#error_mes").html(err_text); 
+        $("#error_mes").fadeIn("slow"); 
+        return false; 
+      }
+    })
+  });
+
+  function isValidEmailAddress(emailAddress) {
+        var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+        return pattern.test(emailAddress); 
+  }
+*/
+
+
+
+
+
+
+
+var fixObj = {
+  fix: function(wrapper, obj, w) {
+    if(wrapper.length && obj.length){
+      this.minTop = wrapper.offset().top;
+      if (obj.attr("id") == "js-home-howto-pass-btn") {
+        this.maxTop = ($("#js-home-test-wrapper").offset().top + 300) - $(window).height();
+      } else {
+        this.maxTop = wrapper.offset().top - 50 + (wrapper.height() - obj.height());
+      }
+
+      if ($(window).scrollTop() >= this.minTop && $(window).scrollTop() < this.maxTop) {
+        obj.removeClass("fixed_bottom").addClass("fixed_top");
+      } else if ($(window).scrollTop() >= this.maxTop) {
+        obj.removeClass("fixed_top").addClass("fixed_bottom");
+      } else {
+        obj.removeClass("fixed_top fixed_bottom").css({"top": 0});
+      }
+      if (w != undefined) {
+        obj.css({"width": w});
+      }
+    }
+  },
+  init: function(){
+    var isiPad = navigator.userAgent.match(/iPad/i) != null;
+    if(!isiPad){
+      $(window).on("ready load scroll resize", function () {
+        fixObj.fix(
+          $("#js-home-faq"),
+          $("#js-home-faq-q_list"),
+          $(".home-col_230").width()
+        );
+      });
+    }
+  }
+};
+
+var faqNav = {
+  init: function () {
+    var faq = $("#js-home-faq");
+    if (faq.size()) {
+      console.log('fav')
+      this.faq = faq;
+      this.sidebar = $("#js-home-faq-q_list");
+      this.content = $("#js-home-faq-rows");
+      this.indicator = $("#js-home-faq-list-indicator");
+      this.indicator.show();
+      $(window).on("load resize scroll", function(){
+        faqNav.staticVars();
+        faqNav.scrollVars();
+        faqNav.setIndicator();
+      });
+    }
+  },
+  staticVars: function () {
+    this.contentHeight = this.content.outerHeight();
+    this.windowHeight = $(window).outerHeight();
+    this.viewPercent = this.windowHeight / this.contentHeight;
+    this.sidebarHeight = this.sidebar.outerHeight();
+  },
+  scrollVars: function () {
+    this.scrollTop = $(window).scrollTop();
+    this.contentTop = this.content.offset().top;
+    this.topPercent = (this.scrollTop - this.contentTop) / this.contentHeight;
+  },
+  setIndicator: function () {
+    var top = this.sidebarHeight * this.topPercent;
+    if (top < 0) {
+      top = 0;
+    } else if (top > (this.sidebarHeight)) {
+      top = this.sidebarHeight;
+    }
+    this.indicator.css({
+      "top": top
+    });
+  }
+};
+
+function scrollTo() {
+  var links = $(".js-scrollto");
+  links.on("click", function (e) {
+    e.preventDefault();
+    var id = $(this).attr("href").split("#")[1],
+      obj = $("#" + id);
+    $('html, body').animate({scrollTop: obj.offset().top - 90}, 200, function () {
+      window.location.hash = "#" + id;
+    });
+    return false;
+  });
+}
