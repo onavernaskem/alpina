@@ -317,7 +317,7 @@ var forms = {
     },
     makeerrfield: function(name) {
         $('[name="'+name+'"]').css('border', '#ff6850 1px solid');
-        $('[name="'+name+'"]').css('color', '#ff6850'); 
+        // $('[name="'+name+'"]').css('color', '#ff6850'); 
     }, 
     showError: function( name, msg ) {
         forms.makeerrfield(name);

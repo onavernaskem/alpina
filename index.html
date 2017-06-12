@@ -204,10 +204,10 @@ data-4100="@class:dark;"
   </figure>
 </div>
 
-<div class="item transparent">
+<div class="item">
 
- <figure class="effect-sadie">
-  <div class="sign">?</div>
+ <figure class="effect-sadie"  style="background-image: url(img/saas.png);">
+ <img src="img/dot.png" alt=""/>
   <figcaption>
     <h2>Системы управления знаниями</h2>
     <p>Создайте свою базу знаний, которая поможет управлять обучением сотрудников. Удобно создавать свою библиотеку и добавлять в нее материалы</p>
@@ -394,16 +394,27 @@ data-4100="@class:dark;"
 </div>
 
 
-<form id="order-modal" class="white-popup-block mfp-hide" action="" method="POST">
+<form id="order-modal" class="white-popup-block mfp-hide" action="" method="POST" onsubmit="return validate();">
   <div class="row">
   <h3>Форма обратной связи</h3>
   <p>Оставьте контакты, менеджер свяжется с вами
 и расскажет все, что знает об услугах «Альпины»</p>
 
-         <div class="input_row"><input type="text" name="name" placeholder="Имя"><div id="error_mes"> </div></div> 
+
+               
+         <div class="input_row"><input type="text" name="name" placeholder="Имя"></div> 
          <div class="input_row"><input type="text" name="company" placeholder="Компания"></div>
-         <div class="input_row"><input type="text" name="email" placeholder="Электронная почта"> <div id="error_mes"> </div></div> 
-         <input type="submit" name="submit" class="btn white notactive" value="Оставить заявку"/>
+         <div class="input_row"><input type="text" name="email" placeholder="Электронная почта"> </div> 
+         <input type="submit" name="submit" class="btn white notactive" value="Оставить заявку"/><div id="error_mes"> </div>
+    
+
+
+
+
+       </form>
+
+
+
     </div>
 
 </form>

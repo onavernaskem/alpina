@@ -372,7 +372,7 @@ figure.effect-sadie:hover figcaption::before { opacity: 1; -webkit-transform: tr
 #books_3 { background-color: #8aacc3; padding: 190px 0; }
 #books_3 h3 { font-size: 32px; }
 
-#read-listen { background-color: #8aacc3; padding: 60px 0 220px 0; color: #fff; }
+#read-listen { background-color: #8aacc3; padding: 60px 0 100px 0; color: #fff; }
 #read-listen h3 { font-size: 32px; color: #fff; margin-bottom: 60px; }
 
 #elib { background-color: #8aacc3; }
