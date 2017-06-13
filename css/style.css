@@ -607,14 +607,7 @@ figure.effect-sadie:hover figcaption::before { opacity: 1; -webkit-transform: tr
 .contact .container .right p { font-size: 20px; line-height: 1.2; max-width: 600px; margin-bottom: 30px; }
 .contact .container .right .btn { margin-top: 10px; }
 
-.mfp-bg { background: rgba(0, 0, 0, 0.6); }
-
-.white-popup-block { background: #fff; padding: 40px; width: 580px; position: relative; margin: 0 auto; }
-.white-popup-block p { margin: 0 0 20px; }
-
-.mfp-close-btn-in .mfp-close { width: 60px; height: 60px; text-indent: -9999px; background: url(../img/close.png) no-repeat; right: -100px; }
-
-input[type="text"] { background: none; border: 1px solid rgba(0, 0, 0, 0.2); height: 52px; padding: 0 10px; display: block; width: 100%; max-width: 400px; margin-bottom: 20px; color: #000; outline: none; font-size: 16px; }
+input[type="text"] { background: none; border: 1px solid rgba(0, 0, 0, 0.2); height: 52px; padding: 0 10px; display: block; width: 100%; max-width: 400px; margin-bottom: 20px; color: #fff; outline: none; font-size: 16px; }
 
 .input_row { position: relative; }
 
@@ -633,6 +626,17 @@ input[type="text"] { background: none; border: 1px solid rgba(0, 0, 0, 0.2); hei
 :-moz-placeholder { color: #000; opacity: .4; }
 
 :-ms-input-placeholder { color: #000; opacity: .4; }
+
+.mfp-bg { background: rgba(0, 0, 0, 0.6); }
+
+.white-popup-block { background: #fff; padding: 40px; width: 580px; position: relative; margin: 0 auto; }
+.white-popup-block .message_success { text-align: center; margin-top: 50px; margin-bottom: 100px; }
+.white-popup-block .message_success h3 { font-size: 24px; margin-bottom: 14px; }
+.white-popup-block input[type="text"] { color: #fff; }
+.white-popup-block .btn { border: none; }
+.white-popup-block p { margin: 0 0 20px; }
+
+.mfp-close-btn-in .mfp-close { width: 60px; height: 60px; text-indent: -9999px; background: url(../img/close.png) no-repeat; right: -100px; }
 
 .video { position: relative; width: 380px; height: 255px; text-align: center; }
 .video img { top: 0; left: 0; position: absolute; }

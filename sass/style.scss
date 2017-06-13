@@ -2740,27 +2740,6 @@ html .ui-button.ui-state-disabled:active {
 		}
 	}
 
-	.mfp-bg {
-		background: rgba(0,0,0,.6);
-	}
-	.white-popup-block{
-		background: #fff;
-		padding: 40px;
-		width: 580px;
-		position: relative;
-		margin: 0 auto;
-
-		p {
-			margin: 0 0 20px;
-		}
-	}
-.mfp-close-btn-in .mfp-close{
-width: 60px;
-height: 60px;
-text-indent: -9999px;
-background: url(../img/close.png) no-repeat;
-right: -100px;
-}
 
 
 	input[type="text"] {
@@ -2772,7 +2751,7 @@ right: -100px;
 		width: 100%;
 		max-width: 400px;
 		margin-bottom: 20px;
-		color: #000;
+		color: #fff;
 		outline: none;
 		font-size: 16px;
 
@@ -2825,37 +2804,73 @@ right: -100px;
 	::-moz-placeholder          {color:#000; opacity: .4;}
 	:-moz-placeholder           {color:#000; opacity: .4;}
 	:-ms-input-placeholder      {color:#000; opacity: .4;}
-				// :focus::-webkit-input-placeholder {color: transparent}
-				// :focus::-moz-placeholder          {color: transparent}
-				// :focus:-moz-placeholder           {color: transparent}
-				// :focus:-ms-input-placeholder      {color: transparent}
 
 
 
 
+	.mfp-bg {
+		background: rgba(0,0,0,.6);
+	}
+	.white-popup-block{
+		background: #fff;
+		padding: 40px;
+		width: 580px;
+		position: relative;
+		margin: 0 auto;
 
-				.video {
-					position: relative;
-					width: 380px;
-					height: 255px;
-					text-align: center;
-					img {
-						top: 0;
-						left: 0;
-						position: absolute;
-					}
-					.play_btn {
-						background: url("../img/btn-play.png") no-repeat;
-						width: 44px;
-						height: 55px;
-						display: inline-block;
-						z-index: 11;
-						text-indent: -9999px;
-						position: absolute;
-						top: 50%;
-						left: 50%;
-						margin-left: -22px;
-						margin-top: -27px;
+		.message_success {
+			text-align: center;
+			margin-top: 50px;
+			margin-bottom: 100px;
+			h3 {
+				font-size: 24px;
+				margin-bottom: 14px;
+			}
+		}
+		input[type="text"] {
+			color: #fff;
+		}
+.btn {
+	border: none;
+}
+
+		p {
+			margin: 0 0 20px;
+		}
+	}
+	.mfp-close-btn-in .mfp-close{
+		width: 60px;
+		height: 60px;
+		text-indent: -9999px;
+		background: url(../img/close.png) no-repeat;
+		right: -100px;
+	}
+
+
+
+
+	.video {
+		position: relative;
+		width: 380px;
+		height: 255px;
+		text-align: center;
+		img {
+			top: 0;
+			left: 0;
+			position: absolute;
+		}
+		.play_btn {
+			background: url("../img/btn-play.png") no-repeat;
+			width: 44px;
+			height: 55px;
+			display: inline-block;
+			z-index: 11;
+			text-indent: -9999px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -22px;
+			margin-top: -27px;
 			// @include vertical-align();
 			&:hover {
 				background: url("../img/btn-play-hover.png") no-repeat;
