@@ -2481,6 +2481,7 @@ html .ui-button.ui-state-disabled:active {
 			font-size: 14px;
 			padding: 10px 15px;
 			margin-bottom: 10px;
+			vertical-align: top;
 
 			img {
 				@include box-shadow(5px, 10px, 15px, 0, rgba(33,33,33,0.2));

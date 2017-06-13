@@ -17,9 +17,5 @@
     position: relative;
 }
 
-/*.backstretch {
-	-webkit-transform:translateZ(1px);
-      -moz-transform:translateZ(1px);
-      -o-transform:translateZ(1px);
-      transform:translateZ(1px);
-}*/
+.map_label {color: #fd4f00; background: rgba(255,255,255,.6); padding: 3px 5px; border-radius: 4px; position: absolute; width: 266px; height: 23px; font-size: 14px; 
+}

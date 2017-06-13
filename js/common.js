@@ -262,9 +262,43 @@ function getScroll() {
 
 
 
-function load(){
+function initMap(){
+
+  // text overlay proto
+  function TxtOverlay(pos, txt, cls, map) {
+    this.pos = pos;
+    this.txt_ = txt;
+    this.cls_ = cls;
+    this.map_ = map;
+    this.div_ = null;
+    this.setMap(map);
+  }
+  TxtOverlay.prototype = new google.maps.OverlayView();
+  TxtOverlay.prototype.onAdd = function() {
+    var div = document.createElement('DIV');
+    div.className = this.cls_;
+    div.innerHTML = this.txt_;
+    this.div_ = div;
+    var overlayProjection = this.getProjection();
+    var position = overlayProjection.fromLatLngToDivPixel(this.pos);
+    div.style.left = position.x + 'px';
+    div.style.top = position.y + 'px';
+    var panes = this.getPanes();
+    panes.floatPane.appendChild(div);
+  }
+  TxtOverlay.prototype.draw = function() {
+      var overlayProjection = this.getProjection();
+      var position = overlayProjection.fromLatLngToDivPixel(this.pos);
+      var div = this.div_;
+      div.style.left = position.x + 'px';
+      div.style.top = position.y + 'px';
+      console.log(position)
+  }
+
+  // create map
 
   var point = new google.maps.LatLng(55.774210, 37.520200);
+  var tooltipTemplate = '4-я Магистральная, дом 5, подъезд 2';
 
   var myMapOptions = {
     zoom: 16,
@@ -303,6 +337,7 @@ function load(){
     position: point
   });
 
+  txt = new TxtOverlay(point, tooltipTemplate, "map_label", map)
 }
 
 
