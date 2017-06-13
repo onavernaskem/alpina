@@ -1192,7 +1192,7 @@ html .ui-button.ui-state-disabled:active {
 				display: inline-block;
 				vertical-align: middle;
 				text-align: center;
-				margin: 0 7px 50px 7px;
+				margin: 0 20px 50px 20px;
 				img {
 					-webkit-filter: grayscale(100%);
 					-moz-filter: grayscale(100%);
@@ -2747,6 +2747,7 @@ html .ui-button.ui-state-disabled:active {
 		background: #fff;
 		padding: 40px;
 		width: 580px;
+		position: relative;
 		margin: 0 auto;
 
 		p {
@@ -2758,6 +2759,7 @@ width: 60px;
 height: 60px;
 text-indent: -9999px;
 background: url(../img/close.png) no-repeat;
+right: -100px;
 }
 
 
@@ -2770,7 +2772,7 @@ background: url(../img/close.png) no-repeat;
 		width: 100%;
 		max-width: 400px;
 		margin-bottom: 20px;
-		color: #fff;
+		color: #000;
 		outline: none;
 		font-size: 16px;
 
@@ -2809,7 +2811,7 @@ background: url(../img/close.png) no-repeat;
 		width: 90%;
 		display: block;
 		padding: 44px 90px;
-		margin:100px auto;
+		margin:100px auto 0;
 		text-align: center;
 		p {
 			margin-bottom: 8px;
