@@ -260,7 +260,7 @@ figure.effect-sadie:hover figcaption::before { opacity: 1; -webkit-transform: tr
 .grid_products .col2 figure.effect-sadie:hover h2 { color: #000; -webkit-transform: none; transform: none; -webkit-transform: translate3d(-50%, -80px, 0); transform: translate3d(-50%, -80px, 0); }
 .grid_products .col3 .item { height: 365px; }
 .grid_products .col3 .item + .item { margin-top: 25px; -webkit-box-shadow: none; box-shadow: none; }
-.grid_products .item { position: relative; text-align: center; -webkit-box-shadow: 0 4px 4px 0 rgba(33, 33, 33, 0.2); -moz-box-shadow: 0 4px 4px 0 rgba(33, 33, 33, 0.2); box-shadow: 0 4px 4px 0 rgba(33, 33, 33, 0.2); overflow: hidden; }
+.grid_products .item { position: relative; text-align: center; overflow: hidden; }
 .grid_products .item img { width: 100%; min-height: 365px; }
 .grid_products .item:hover { cursor: pointer; }
 .grid_products .item p { max-width: 500px; left: 50%; }
@@ -536,7 +536,7 @@ figure.effect-sadie:hover figcaption::before { opacity: 1; -webkit-transform: tr
 .books_collection { margin: 30px 0; line-height: 0; font-size: 1px; text-justify: newspaper; zoom: 1; text-align: justify; text-align-last: justify; -moz-text-align-last: justify; }
 .books_collection:after { width: 100%; height: 0; visibility: hidden; overflow: hidden; content: ''; display: inline-block; }
 .books_collection .item { background: #fff; color: #627478; text-align: left; text-align-last: left; display: inline-block; vertical-align: top; position: relative; margin: 10px 0; width: 22%; height: 310px; -webkit-box-shadow: 5px 10px 15px 0 rgba(33, 33, 33, 0.2); -moz-box-shadow: 5px 10px 15px 0 rgba(33, 33, 33, 0.2); box-shadow: 5px 10px 15px 0 rgba(33, 33, 33, 0.2); margin-bottom: 20px; }
-.books_collection .item .title { padding: 30px 10px 10px 20px; font-family: "GTWalsheimProBold", sans-serif; font-size: 20px; }
+.books_collection .item .title { padding: 20px 10px 10px 20px; font-family: "GTWalsheimProBold", sans-serif; font-size: 20px; line-height: 20px; }
 .books_collection .item p { padding: 0 10px 20px 20px; }
 .books_collection .item img { display: block; position: absolute; bottom: 0; width: 100%; }
 .books_collection .first { background: #627478; color: #fff; width: 48%; overflow: hidden; }

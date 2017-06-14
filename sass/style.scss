@@ -1038,7 +1038,7 @@ html .ui-button.ui-state-disabled:active {
 		.item {
 			position: relative;
 			text-align: center;
-			@include box-shadow(0, 4px, 4px, 0, rgba(33,33,33,0.2));
+			// @include box-shadow(0, 4px, 4px, 0, rgba(33,33,33,0.2));
 			overflow: hidden; 
 
 			img {
@@ -2412,9 +2412,10 @@ html .ui-button.ui-state-disabled:active {
 			@include box-shadow(5px, 10px, 15px, 0, rgba(33,33,33,0.2));
 			margin-bottom: 20px;
 			.title {
-				padding: 30px 10px 10px 20px;
+				padding: 20px 10px 10px 20px;
 				font-family: $font_bold;
 				font-size: 20px;
+				line-height: 20px;
 			}
 			p {
 				padding: 0 10px 20px 20px;
