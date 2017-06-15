@@ -594,16 +594,17 @@ figure.effect-sadie:hover figcaption::before { opacity: 1; -webkit-transform: tr
 #saas .tabs li.active, #saas .tabs li:not(.active):hover { background: #8aacc3; color: #fff; }
 
 .contact { color: #fff; margin-top: 60px; margin-bottom: 60px; clear: both; }
-.contact .container { overflow: hidden; }
+.contact .container { display: table; overflow: hidden; }
 .contact .container:after { content: ""; height: 1px; width: 100%; position: absolute; bottom: 0; left: 0; background: rgba(0, 0, 0, 0.2); }
 .contact .container .name { font-size: 24px; margin-bottom: 15px; font-family: "GTWalsheimProBold", sans-serif; }
 .contact .container .work { margin-bottom: 10px; max-width: 250px; }
 .contact .container .center p { margin: 20px auto 40px; max-width: 600px; font-size: 20px; }
-.contact .container .left { width: 35%; padding-left: 30px; }
+.contact .container .left, .contact .container .right { display: table-cell; vertical-align: top; }
+.contact .container .left { width: 35%; padding-left: 30px; float: none; position: relative; padding-bottom: 250px; }
 .contact .container .left a { color: #fff; text-decoration: none; }
 .contact .container .left a:hover { color: #ffd8b8; }
-.contact .container .left img { float: right; padding-right: 50px; }
-.contact .container .right { width: 60%; padding-left: 30px; padding-right: 90px; }
+.contact .container .left img { position: absolute; bottom: 0; right: 30px; }
+.contact .container .right { float: none; width: 60%; padding-left: 30px; padding-right: 90px; }
 .contact .container .right p { font-size: 20px; line-height: 1.2; max-width: 600px; margin-bottom: 30px; }
 .contact .container .right .btn { margin-top: 10px; }
 
@@ -616,7 +617,7 @@ input[type="text"] { background: none; border: 1px solid rgba(0, 0, 0, 0.2); hei
 #error_mes:after { right: 100%; top: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(218, 40, 12, 0); border-right-color: #da280c; border-width: 10px; margin-top: -10px; }
 
 .success_message { border: 1px solid #fff; width: 90%; display: block; padding: 44px 90px; margin: 100px auto 0; text-align: center; }
-.success_message p { margin-bottom: 8px; }
+.success_message p { margin-bottom: 8px !important; }
 .success_message strong { font-size: 20px; }
 
 ::-webkit-input-placeholder { color: #000; opacity: .4; }

@@ -2674,12 +2674,16 @@ html .ui-button.ui-state-disabled:active {
 
 
 
+
 	.contact {
 		color: #fff;
 		margin-top: 60px;
 		margin-bottom: 60px;
 		clear: both;
+
+
 		.container {
+			display: table;
 			overflow: hidden;
 			&:after {
 				content: "";
@@ -2689,8 +2693,7 @@ html .ui-button.ui-state-disabled:active {
 				bottom: 0;
 				left:0;
 				background: rgba(0,0,0,.2);
-			}
-			
+			}	
 			.name {
 				font-size: 24px;
 				margin-bottom: 15px;
@@ -2706,11 +2709,19 @@ html .ui-button.ui-state-disabled:active {
 					max-width: 600px;
 					font-size: 20px;
 				}
-				
+
+			}
+
+			.left,.right {
+				display: table-cell;
+			vertical-align: top;
 			}
 			.left {
 				width: 35%;
 				padding-left: 30px;
+				float: none;
+				position: relative;
+				padding-bottom: 250px;
 				a {
 					color: #fff;
 					text-decoration: none;
@@ -2719,11 +2730,15 @@ html .ui-button.ui-state-disabled:active {
 					}
 				}
 				img {
-					float: right;
-					padding-right: 50px;
+					position: absolute;
+					bottom: 0;
+					right: 30px;
+					// float: right;
+					// padding-right: 50px;
 				}
 			}
 			.right{
+				float: none;
 				width: 60%;
 				padding-left: 30px;
 				padding-right: 90px;
@@ -2794,7 +2809,7 @@ html .ui-button.ui-state-disabled:active {
 		margin:100px auto 0;
 		text-align: center;
 		p {
-			margin-bottom: 8px;
+			margin-bottom: 8px!important;
 		}
 		strong {
 			font-size: 20px;
@@ -2831,9 +2846,9 @@ html .ui-button.ui-state-disabled:active {
 		input[type="text"] {
 			color: #fff;
 		}
-.btn {
-	border: none;
-}
+		.btn {
+			border: none;
+		}
 
 		p {
 			margin: 0 0 20px;
