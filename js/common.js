@@ -36,7 +36,12 @@
 
   $( "#show_more" ).click(function() {     
    $('#another-element').slideToggle('slow');
+    $(this).remove();
  });
+
+
+
+
 
   $(function(){
 

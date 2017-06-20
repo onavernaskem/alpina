@@ -2236,18 +2236,42 @@ html .ui-button.ui-state-disabled:active {
 			h2 {
 				color: #fff;
 				font-size: 38px;
+			}	
+			cite {
+				border-top: 1px solid #ccc;
+				border-bottom: 1px solid #ccc;
+				padding: 20px  20px 20px 0;
+				margin: 30px 0;
+				display: block;
+				font-size: 20px;
 			}
 			.white {
 				margin: 0 auto;
 				max-width: 790px;
 				padding: 60px 80px 30px;
 				float: none;
+				&.normal {
+					max-width: 100%;
+					padding: 50px;
+					margin-bottom: 60px;
+				}
+
 			}
+
+			form {
+				padding-top: 30px;
+				clear: both;
+			}
+			.btn[type="submit"] {
+				margin-top: 10px;
+				background: $green;
+			}
+
 			.item {
 				clear: both;
 				overflow: hidden;
 				padding-bottom: 50px;
-				max-width: 800px;
+				// max-width: 800px;
 				margin: 0 auto;
 				float: none;
 				h3 {
@@ -2268,6 +2292,7 @@ html .ui-button.ui-state-disabled:active {
 						line-height: 22px;
 						margin-top: 20px;
 						width: 100px;
+						font-family: $font_regular;
 					}
 					p {
 						position: absolute;
@@ -2307,6 +2332,15 @@ html .ui-button.ui-state-disabled:active {
 					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeb451', endColorstr='#cc5308',GradientType=0 ); 
 
 				}
+				.violet {
+					/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9a769d+0,331737+100 */
+					background: rgb(154,118,157); /* Old browsers */
+					background: -moz-linear-gradient(top, rgba(154,118,157,1) 0%, rgba(51,23,55,1) 100%); /* FF3.6-15 */
+					background: -webkit-linear-gradient(top, rgba(154,118,157,1) 0%,rgba(51,23,55,1) 100%); /* Chrome10-25,Safari5.1-6 */
+					background: linear-gradient(to bottom, rgba(154,118,157,1) 0%,rgba(51,23,55,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9a769d', endColorstr='#331737',GradientType=0 ); /* IE6-9 */
+				}
+
 				.right {
 					float: right;
 					margin-right: 0;
@@ -2624,7 +2658,7 @@ html .ui-button.ui-state-disabled:active {
 		&.vertical {
 			.tabs__content {
 				float: left;
-				width: 70%;
+				width: 80%;
 				vertical-align: top;
 				img {
 					box-shadow: none;
@@ -2632,7 +2666,7 @@ html .ui-button.ui-state-disabled:active {
 			}
 			.tabs__caption {
 				float: left;
-				width: 28%;
+				width: 20%;
 				vertical-align: top;
 				margin: 0;
 				li {
@@ -2680,8 +2714,6 @@ html .ui-button.ui-state-disabled:active {
 		margin-top: 60px;
 		margin-bottom: 60px;
 		clear: both;
-
-
 		.container {
 			display: table;
 			overflow: hidden;
@@ -2714,7 +2746,7 @@ html .ui-button.ui-state-disabled:active {
 
 			.left,.right {
 				display: table-cell;
-			vertical-align: top;
+				vertical-align: top;
 			}
 			.left {
 				width: 35%;
@@ -2733,8 +2765,6 @@ html .ui-button.ui-state-disabled:active {
 					position: absolute;
 					bottom: 0;
 					right: 30px;
-					// float: right;
-					// padding-right: 50px;
 				}
 			}
 			.right{
@@ -2751,11 +2781,13 @@ html .ui-button.ui-state-disabled:active {
 				.btn {
 					margin-top: 10px;
 				}
-				
+				input[type="text"] {
+					color: #fff;
+				}
 			}
 		}
-	}
 
+	}
 
 
 	input[type="text"] {
@@ -2767,10 +2799,8 @@ html .ui-button.ui-state-disabled:active {
 		width: 100%;
 		max-width: 400px;
 		margin-bottom: 20px;
-		color: #fff;
 		outline: none;
 		font-size: 16px;
-
 	}
 
 	.input_row {
@@ -2816,6 +2846,8 @@ html .ui-button.ui-state-disabled:active {
 		}
 	}
 
+
+
 	::-webkit-input-placeholder {color:#000; opacity: .4;}
 	::-moz-placeholder          {color:#000; opacity: .4;}
 	:-moz-placeholder           {color:#000; opacity: .4;}
@@ -2844,7 +2876,7 @@ html .ui-button.ui-state-disabled:active {
 			}
 		}
 		input[type="text"] {
-			color: #fff;
+			color: #000;
 		}
 		.btn {
 			border: none;
@@ -2854,7 +2886,7 @@ html .ui-button.ui-state-disabled:active {
 			margin: 0 0 20px;
 		}
 	}
-	.mfp-close-btn-in .mfp-close{
+	.mfp-close-btn-in .mfp-close {
 		width: 60px;
 		height: 60px;
 		text-indent: -9999px;
@@ -2887,12 +2919,9 @@ html .ui-button.ui-state-disabled:active {
 			left: 50%;
 			margin-left: -22px;
 			margin-top: -27px;
-			// @include vertical-align();
 			&:hover {
 				background: url("../img/btn-play-hover.png") no-repeat;
 			}
-			
-
 		}
 	}
 
@@ -3046,7 +3075,6 @@ html .ui-button.ui-state-disabled:active {
 		a {
 			color: #727272;
 		}
-
 	}
 
 	.distr_map {
@@ -3258,3 +3286,5 @@ html .ui-button.ui-state-disabled:active {
 			}
 		}
 	}
+
+

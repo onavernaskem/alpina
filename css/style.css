@@ -508,16 +508,21 @@ figure.effect-sadie:hover figcaption::before { opacity: 1; -webkit-transform: tr
 
 #solutions { padding-top: 60px !important; padding-bottom: 90px; position: relative; z-index: 101; }
 #solutions h2 { color: #fff; font-size: 38px; }
+#solutions cite { border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; padding: 20px  20px 20px 0; margin: 30px 0; display: block; font-size: 20px; }
 #solutions .white { margin: 0 auto; max-width: 790px; padding: 60px 80px 30px; float: none; }
-#solutions .item { clear: both; overflow: hidden; padding-bottom: 50px; max-width: 800px; margin: 0 auto; float: none; }
+#solutions .white.normal { max-width: 100%; padding: 50px; margin-bottom: 60px; }
+#solutions form { padding-top: 30px; clear: both; }
+#solutions .btn[type="submit"] { margin-top: 10px; background: #82ab8e; }
+#solutions .item { clear: both; overflow: hidden; padding-bottom: 50px; margin: 0 auto; float: none; }
 #solutions .item h3 { margin-top: 10px; }
 #solutions .item .img { float: left; height: 267px; width: 196px; color: #fff; padding: 20px; position: relative; margin-right: 60px; -webkit-box-shadow: 0 10px 10px 0 rgba(33, 33, 33, 0.2); -moz-box-shadow: 0 10px 10px 0 rgba(33, 33, 33, 0.2); box-shadow: 0 10px 10px 0 rgba(33, 33, 33, 0.2); }
-#solutions .item .img .title { font-size: 18px; line-height: 22px; margin-top: 20px; width: 100px; }
+#solutions .item .img .title { font-size: 18px; line-height: 22px; margin-top: 20px; width: 100px; font-family: "GTWalsheimProRegular", sans-serif; }
 #solutions .item .img p { position: absolute; bottom: 20px; left: 20px; }
 #solutions .item .img img { display: block; margin: 20px 0; }
 #solutions .item .blue { /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00cef6+0,007fe2+100 */ background: #00cef6; background: -moz-linear-gradient(top, #00cef6 0%, #007fe2 100%); background: -webkit-linear-gradient(top, #00cef6 0%, #007fe2 100%); background: linear-gradient(to bottom, #00cef6 0%, #007fe2 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00cef6', endColorstr='#007fe2',GradientType=0 ); }
 #solutions .item .green { /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#69a43f+0,114005+100 */ background: #69a43f; background: -moz-linear-gradient(top, #69a43f 0%, #114005 100%); background: -webkit-linear-gradient(top, #69a43f 0%, #114005 100%); background: linear-gradient(to bottom, #69a43f 0%, #114005 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69a43f', endColorstr='#114005',GradientType=0 ); }
 #solutions .item .orange { /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eeb451+0,cc5308+100 */ background: #eeb451; background: -moz-linear-gradient(top, #eeb451 0%, #cc5308 100%); background: -webkit-linear-gradient(top, #eeb451 0%, #cc5308 100%); background: linear-gradient(to bottom, #eeb451 0%, #cc5308 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeb451', endColorstr='#cc5308',GradientType=0 ); }
+#solutions .item .violet { /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9a769d+0,331737+100 */ background: #9a769d; /* Old browsers */ background: -moz-linear-gradient(top, #9a769d 0%, #331737 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(top, #9a769d 0%, #331737 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(to bottom, #9a769d 0%, #331737 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9a769d', endColorstr='#331737',GradientType=0 ); /* IE6-9 */ }
 #solutions .item .right { float: right; margin-right: 0; margin-left: 30px; }
 #solutions .item + .item { padding-top: 50px; border-top: 1px solid #c4c4c4; }
 #solutions .btn { margin-top: 40px; background: none; color: #000; }
@@ -582,9 +587,9 @@ figure.effect-sadie:hover figcaption::before { opacity: 1; -webkit-transform: tr
 .tabs .tabs__caption li.active, .tabs .tabs__caption li:not(.active):hover { background: #FFF; color: #000; }
 .tabs .tabs__caption li { display: inline-block; color: #FFF; position: relative; text-align: center; padding: 5px 20px; text-transform: uppercase; border: 1px solid #fff; font-family: "GTWalsheimProLight", sans-serif; font-size: 14px; letter-spacing: 1px; margin-left: -1px; }
 .tabs .tabs__caption li:not(.active) { cursor: pointer; }
-.tabs.vertical .tabs__content { float: left; width: 70%; vertical-align: top; }
+.tabs.vertical .tabs__content { float: left; width: 80%; vertical-align: top; }
 .tabs.vertical .tabs__content img { box-shadow: none; }
-.tabs.vertical .tabs__caption { float: left; width: 28%; vertical-align: top; margin: 0; }
+.tabs.vertical .tabs__caption { float: left; width: 20%; vertical-align: top; margin: 0; }
 .tabs.vertical .tabs__caption li { display: block; border: none; color: #000; text-align: left; padding-left: 0; }
 .tabs.vertical .tabs__caption li.active { color: #fff; padding-left: 30px; background: none; }
 .tabs.vertical .tabs__caption li:not(.active):hover { background: none; color: #ffd8b8; }
@@ -607,8 +612,9 @@ figure.effect-sadie:hover figcaption::before { opacity: 1; -webkit-transform: tr
 .contact .container .right { float: none; width: 60%; padding-left: 30px; padding-right: 90px; }
 .contact .container .right p { font-size: 20px; line-height: 1.2; max-width: 600px; margin-bottom: 30px; }
 .contact .container .right .btn { margin-top: 10px; }
+.contact .container .right input[type="text"] { color: #fff; }
 
-input[type="text"] { background: none; border: 1px solid rgba(0, 0, 0, 0.2); height: 52px; padding: 0 10px; display: block; width: 100%; max-width: 400px; margin-bottom: 20px; color: #fff; outline: none; font-size: 16px; }
+input[type="text"] { background: none; border: 1px solid rgba(0, 0, 0, 0.2); height: 52px; padding: 0 10px; display: block; width: 100%; max-width: 400px; margin-bottom: 20px; outline: none; font-size: 16px; }
 
 .input_row { position: relative; }
 
@@ -633,7 +639,7 @@ input[type="text"] { background: none; border: 1px solid rgba(0, 0, 0, 0.2); hei
 .white-popup-block { background: #fff; padding: 40px; width: 580px; position: relative; margin: 0 auto; }
 .white-popup-block .message_success { text-align: center; margin-top: 50px; margin-bottom: 100px; }
 .white-popup-block .message_success h3 { font-size: 24px; margin-bottom: 14px; }
-.white-popup-block input[type="text"] { color: #fff; }
+.white-popup-block input[type="text"] { color: #000; }
 .white-popup-block .btn { border: none; }
 .white-popup-block p { margin: 0 0 20px; }
 
