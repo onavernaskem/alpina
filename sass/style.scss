@@ -588,6 +588,7 @@ html .ui-button.ui-state-disabled:active {
 		}
 		a {
 			color: #fff;
+			text-decoration: none;
 		}
 		.top { 
 			text-align: center;
@@ -1756,7 +1757,7 @@ html .ui-button.ui-state-disabled:active {
 				width: 45%;
 				margin-left:5%;
 				color: #fff;
-				padding-bottom: 60px;
+				// padding-bottom: 30px;
 
 				&:nth-child(1) {
 					float: left;
@@ -1806,6 +1807,9 @@ html .ui-button.ui-state-disabled:active {
 				font-size: 14px;
 				padding-right: 20px;
 				padding-top: 40px;
+				-webkit-column-break-inside: avoid;
+				page-break-inside: avoid;
+				break-inside: avoid;
 				div {
 					color: #fff;
 					display: block;
@@ -2264,7 +2268,7 @@ html .ui-button.ui-state-disabled:active {
 			}
 			.btn[type="submit"] {
 				margin-top: 10px;
-				background: $green;
+				// background: $green;
 			}
 
 			.item {
@@ -2398,6 +2402,7 @@ html .ui-button.ui-state-disabled:active {
 			p.work {
 				margin-bottom: 10px;
 			}
+
 			.btn {
 				border: none;
 				background: #fff;
@@ -2611,7 +2616,7 @@ html .ui-button.ui-state-disabled:active {
 
 	.tabs {
 		font-size: 16px;
-		margin-bottom: 60px;
+		margin-bottom: 40px;
 		img {
 			@include box-shadow(5px, 10px, 15px, 0, rgba(33,33,33,0.2));
 		}
@@ -2627,7 +2632,7 @@ html .ui-button.ui-state-disabled:active {
 		}
 
 		.tabs__caption {
-			margin: 45px 0;
+			margin: 45px 0 0;
 			list-style: none;
 			position: relative;
 			font-size: 0;
@@ -2730,10 +2735,15 @@ html .ui-button.ui-state-disabled:active {
 				font-size: 24px;
 				margin-bottom: 15px;
 				font-family:  $font_bold;
+				color: #000;
 			}
 			.work {
 				margin-bottom: 10px;
 				max-width: 250px; 
+				color: #000;
+			}
+			.address {
+				color: #000;
 			}
 			.center {
 				p {
@@ -2771,7 +2781,7 @@ html .ui-button.ui-state-disabled:active {
 				float: none;
 				width: 60%;
 				padding-left: 30px;
-				padding-right: 90px;
+				padding-right: 60px;
 				p {
 					font-size: 20px;
 					line-height: 1.2;
@@ -2783,6 +2793,15 @@ html .ui-button.ui-state-disabled:active {
 				}
 				input[type="text"] {
 					color: #fff;
+				}
+				.check {
+					margin-top: 15px;
+					margin-bottom: 10px;
+					
+						color:#000; 
+						opacity: .4;
+					
+					
 				}
 			}
 		}
@@ -2846,6 +2865,17 @@ html .ui-button.ui-state-disabled:active {
 		}
 	}
 
+	#order-modal {
+		.check {
+			margin-top: 15px;
+			margin-bottom: 10px;
+		
+				color:#000; 
+				opacity: .4;
+		
+
+		}
+	}
 
 
 	::-webkit-input-placeholder {color:#000; opacity: .4;}
@@ -2899,8 +2929,8 @@ html .ui-button.ui-state-disabled:active {
 
 	.video {
 		position: relative;
-		width: 380px;
-		height: 255px;
+		// width: 380px;
+		min-height: 255px;
 		text-align: center;
 		img {
 			top: 0;
@@ -3132,7 +3162,7 @@ html .ui-button.ui-state-disabled:active {
 		}
 		#map_canvas {
 			width: 100%;
-			height: 650px;
+			height: 500px;
 			&:before {
 				content: "";
 				position: fixed;

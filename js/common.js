@@ -303,7 +303,7 @@ function initMap(){
   // create map
 
   var point = new google.maps.LatLng(55.774210, 37.520200);
-  var tooltipTemplate = '4-я Магистральная, дом 5, подъезд 2';
+  var tooltipTemplate = '4-я Магистральная, дом 5, подъезд 3, этаж 3';
 
   var myMapOptions = {
     zoom: 16,
